@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/0bc25bddb1.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="box-sizing: border-box;">
+  <header>
+    <div class="navbar navbar-expand-lg">
+      <div class="logo"><img src="assets/logo.PNG" width="200px" height="65px"></div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dishes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Order</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ms-auto" style="margin: auto 20px;">
+        <li class="nav-link">
+          <i onclick="closeCart()" style="color: white; cursor:pointer;" class=" fas fa-shopping-cart"></i>
+        </li>
+      </ul>
+    </div>
+    <div id="cartContainer">
+
+    </div>
+  </header>
+  <div class="wrapper-container">
+    <img src="assets/ing3.PNG" width="100%" height="400px">
+    <h1 class="text-center search-label" style="font-family: 'Courgette', cursive;">Search meal category</h1>
+    <div class="search-box input-group">
+      <select id="select" class="form-control">
+        <option hidden>Search your desired category</option>
+      </select>
+      <button type="submit" class="search-btn" id="search-btn" onclick="search()"><i class="fas fa-search"></i></button>
+    </div>
+    <div id="error-txt"></div>
+    <div class="meals">
+      <div class="search-result row justify-content-center" style="padding-top: 30px;">
+
+      </div>
+    </div>
+    <div class="meal-details">
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+
+  <footer class="text-center">
+    <div class="row">
+      <div class="col-md-4 footer-part">
+        <h5 class="footer-title">About Us :</h5>
+        <p class="about-us-para"> From the fresh vegitable of nature we made
+          gorgeouse recipes with original flavors and a lot of love to meet
+          our clients taste.</p>
+      </div>
+      <div class="col-md-4 footer-part" id="middle-footer-part">
+        <div class="logo"><img src="assets/logo.PNG" width="200px" height="65px"></div>
+        <h5 class="footer-title">Follow Us :</h5>
+        <div class="row social-media-container">
+          <div class="follow-icon-wrapper"><i class="fab fa-facebook follow-icon"></i></div>
+          <div class="follow-icon-wrapper"><i class="fab fa-instagram follow-icon"></i></div>
+          <div class="follow-icon-wrapper"><i class="fab fa-youtube follow-icon"></i></div>
+        </div>
+      </div>
+      <div class="col-md-4 footer-part">
+        <ul class="contact-us-footer">
+          <h5 class="footer-title">Contact Us :</h5>
+          <li>
+            <p class="contact-data"><i class='fas fa-phone fa-rotate-90 contact-icon'></i>+216 27 213 456</p>
+          </li>
+          <li>
+            <p class="contact-data"><i class="fas fa-envelope contact-icon"></i>restaurant@gmail.com</p>
+          </li>
+          <li>
+            <p class="contact-data"><i class="fas fa-map-marker-alt contact-icon"></i>17 Ibn Sina, Menzah 9</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js" defer="defer"></script>
+</body>
+
+</html>
