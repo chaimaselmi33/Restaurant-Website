@@ -64,7 +64,6 @@ search_result.innerHTML = html;
 function getMealDetails(event){
   let card =  event.target.parentElement.parentElement;
   let cardTitle = card.children;
-  console.log("title :",cardTitle[0].innerText);
   mealDetailsModal(cardTitle[0].innerText);
 }
 
@@ -103,7 +102,6 @@ function addToCart(event){
   const cardbody = event.target.parentElement.parentElement.parentElement;
   let mealName = cardbody.children[0].innerHTML;
   let mealPrice = parseInt(cardbody.children[1].nextElementSibling.innerHTML);
-  console.log("mealName",mealName);
   let img = cardbody.previousElementSibling.src;
   // test deplucats
   if(cartArray.length != 0){
@@ -111,18 +109,15 @@ function addToCart(event){
   if(!test){
     {  cartArray.push({name:mealName, price:mealPrice, img:img});}
   }
-  console.log(test);
   }
   else
   {  
   cartArray.push({name:mealName, price:mealPrice, img:img});}
   computeTotal(mealPrice);
   displayCart();  
-  console.log("worked");
 }
 //used to compute cart total
 function computeTotal(mealPrice){
-  console.log("price passed",mealPrice);
   sum += mealPrice;
   return sum;
 }
@@ -130,7 +125,6 @@ function computeTotal(mealPrice){
 function displayCart(){
 var cartContainer = document.getElementById('cartContainer');
 cartContainer.style.display="block";
-console.log("**jkh*",cartArray);
 let html ='';
 cartArray.forEach(element => {
 html += `
@@ -174,10 +168,13 @@ function deleteMeal(event){
   let siblingChild = parent.previousElementSibling.children;
   let cardTitle = siblingChild[0].innerHTML;
   cartArray = cartArray.filter(ele => ele.name != cardTitle);
+  sum = 0;
+  cartArray.forEach(e => {
+    computeTotal(e.price);
+  });
   /**/
   let qteParent = siblingChild[1].children;
   let qteElement = qteParent[1];
-  console.log("qte",qteElement);
   qteElement.innerHTML = `QTE : ${qte}`; 
   displayCart();
 }

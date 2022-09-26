@@ -304,7 +304,7 @@ p {
 
 /* scroll-bar */
 ::-webkit-scrollbar {
-    width: 7px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
