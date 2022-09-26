@@ -1,3 +1,3 @@
 # Restaurant-Website
-[Uploading recording-2022-09-26-12-14-30.webm…]()
-![aa](https://user-images.githubusercontent.com/69457494/192252442-9b25b0d5-fdb8-4ba1-a4b9-02e191dcb7ad.jpg)
+![giphy](https://user-images.githubusercontent.com/69457494/192252871-d2a2576f-173b-4008-bb41-23683f81d547.gif)
+
